@@ -13,7 +13,7 @@
 
     /* HERO SECTION */
     .hero {
-        height: 100vh;
+        min-height: 100vh;
         background: url(image/1\ \(2\).jpg) no-repeat center;
         background-size: cover;
         position: relative;
@@ -412,40 +412,33 @@
 * {
     box-sizing: border-box;
 }
-
 img, video {
     max-width: 100%;
     height: auto;
 }
-
 /* HERO */
 .hero h1 {
     font-size: 40px;
 }
-
 .hero p {
     font-size: 22px;
 }
-
 /* ABOUT */
 .about-images img {
     width: 100%;
     max-width: 350px;
 }
-
 /* GALLERY FIX */
 .gallery-item img,
 .gallery-item video {
     width: 100%;
     height: 100%;
 }
-
 /* CONTACT */
 .contact-form {
     width: 100%;
     max-width: 350px;
 }
-
 /* SERVICES */
 .service-card {
     width: 100%;
@@ -460,79 +453,117 @@ img, video {
     header h1 {
         font-size: 22px;
     }
-
     .hero {
         height: auto;
         padding: 60px 20px;
     }
-
     .hero h1 {
         font-size: 26px;
     }
-
     .hero p {
         font-size: 18px;
     }
-
     .btn {
         font-size: 16px;
         padding: 12px 20px;
     }
-
     .about-container {
         flex-direction: column;
         text-align: center;
     }
-
     .about-content h2 {
         font-size: 26px;
     }
-
     .about-content p {
         font-size: 16px;
     }
-
     .about-stats {
         justify-content: center;
     }
-
     .services-container {
         flex-direction: column;
         align-items: center;
     }
-
     .gallery-section h2 {
         font-size: 28px;
     }
-
     .why-section h2 {
         font-size: 28px;
     }
-
     .contact-container {
         flex-direction: column;
         align-items: center;
     }
-
 }
 
 /* تابلت */
 @media (min-width: 769px) and (max-width: 1024px) {
-
     .hero h1 {
         font-size: 32px;
     }
-
     .hero p {
         font-size: 20px;
     }
-
     .about-container {
         gap: 30px;
     }
-
     .services-container {
         justify-content: center;
     }
+}
 
+/* ===== تحسين الهاتف فقط ===== */
+@media (max-width: 480px) {
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 50px 15px;
+    }
+    .hero h1 {
+        font-size: 22px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    /* ABOUT */
+    .about-section {
+        padding: 60px 15px;
+    }
+    .about-images {
+        position: static;
+    }
+    .about-images img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-images .after {
+        position: static;
+        border: none;
+        margin-top: 10px;
+    }
+    /* SERVICES */
+    .service-card {
+        padding: 20px;
+    }
+    /* GALLERY */
+    .gallery-section {
+        padding: 60px 15px;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    /* WHY */
+    .why-section {
+        padding: 60px 15px;
+    }
+    /* CONTACT */
+    .contact-section {
+        padding: 60px 15px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-info {
+        text-align: center;
+    }
 }
